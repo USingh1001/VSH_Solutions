@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import SearchForm from "./components/SearchForm/SearchForm";
+import WebSeriesListContainer from "./components/WebSeriesListContainer/WebSeriesListContainer";
+
+
+class App extends Component {
+  render() {
+    return (
+      <Container className="containerBox">
+        <Row>
+          <Col xs={12}>
+            <SearchForm />
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12} className="listContainer">
+            <h1>List of Web Series</h1>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12}>
+            <WebSeriesListContainer />
+          </Col>
+        </Row>
+      </Container>
+    )
+  }
 }
 
 export default App;
