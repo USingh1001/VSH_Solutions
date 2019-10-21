@@ -5,7 +5,7 @@ Clone the project to your local machine with the below command on your console
 git clone https://github.com/USingh1001/VSH_Solutions.git
 
 Change Directory for the cloned project
-cd VSH_Solutions_Assignment
+cd VSH_Solutions
 
 Add the required dependencies for this project
 npm install
